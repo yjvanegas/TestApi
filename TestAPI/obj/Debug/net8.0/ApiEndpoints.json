@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "TestAPI.Controllers.MarcasAutosController",
+    "Method": "GetMarcasAutos",
+    "RelativePath": "api/MarcasAutos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

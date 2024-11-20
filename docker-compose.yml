@@ -1,0 +1,24 @@
+services:
+  test_api:
+    image: "test_api_img"
+    container_name: "test_api_app"
+    build: 
+        context: ./test_api
+    restart: "always"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
+  db:
+    image: postgres
+    container_name: postgres_db
+    ports:
+      - 5432:5432
+    environment:
+        - POSTGRES_USER: postgres
+        - POSTGRES_PASSWORD: @123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
